@@ -1,11 +1,13 @@
 package org.generation.italy;
 
+
 public class MobilApp {
 
 	private String nome, sistemaOperativo;
 	private float prezzo, ricavoTotale;
 	private int totaleValutazioni, numeroValutazioni;
     
+	
     // costruttore
 	public MobilApp(String nome, String sistemaOperativo, float prezzo) {
 
@@ -17,6 +19,7 @@ public class MobilApp {
 		numeroValutazioni=0;
 		ricavoTotale=0f;
 	}
+
 
 	public String getNome() 
 	{
@@ -81,7 +84,7 @@ public class MobilApp {
 	}
 	
 	// metodo per la valutazione dell'applicazione
-	public boolean riceviValutazione (int numeroStelle)
+	public boolean eseguiValutazione (int numeroStelle)
 	{
 		boolean esito = false;
 		if (numeroStelle>1 && numeroStelle<5)
@@ -94,8 +97,9 @@ public class MobilApp {
 	}
     
 	// restituisce la valutazione media ricevuta finora
-	public void valutazioneMedia ()
+	public float valutazioneMedia ()
 	{
 		float valutazioneMedia = (float) totaleValutazioni/numeroValutazioni;
+		return valutazioneMedia;
 	}
 }
